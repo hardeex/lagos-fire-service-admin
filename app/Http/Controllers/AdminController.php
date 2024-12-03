@@ -51,4 +51,10 @@ class AdminController extends Controller
     {
         return view('admin.upload_document');
     }
+
+
+    public function fieldForm()
+    {
+        return view('admin.field-form');
+    }
 }

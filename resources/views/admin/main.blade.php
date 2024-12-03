@@ -36,6 +36,7 @@
                             class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             id="task-selector">
                             <option>-common task-</option>
+                            <option value="field-form">Field Form</option>
                             <option value="reminders">Reminders</option>
                             <option value="approvals">Approvals</option>
                             <option value="portal">Portal Settings</option>
@@ -115,6 +116,9 @@
                         break;
                     case 'audit':
                         url = '#';
+                        break;
+                    case 'field-form':
+                        url = '{{route('admin.field-form')}}';
                         break;
                 }
                 if (url) {

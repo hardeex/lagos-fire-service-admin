@@ -20,6 +20,7 @@ Route::get('/admin/industry', [AdminController::class, 'manageIndustry'])->name(
 Route::get('/admin/business-report', [AdminController::class, 'manageBusiness'])->name('admin.manage-business');
 Route::get('/admin/invoice', [AdminController::class, 'invoice'])->name('admin.invoice');
 Route::get('admin/account-history', [AdminController::class, 'accountHistory'])->name('admin.account');
+Route::get('admin/field-form', [AdminController::class, 'fieldForm'])->name('admin.field-form');
 Route::get('/admin/upload', [AdminController::class, 'uploadDocument'])->name('admin.upload');
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
