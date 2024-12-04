@@ -12,7 +12,7 @@ Route::get('/', function () {
 
 // Admin Routes
 Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
-Route::post('/admin/login', [AdminController::class, 'login']);
+Route::post('/admin/login', [AdminController::class, 'adminLoginOne'])->name('api.login');
 Route::get('/admin/otp-verify', [AdminController::class, 'otpVerify'])->name('admin.otp-verify');
 Route::get('/admin/main', [AdminController::class, 'main'])->name('admin.main');
 Route::get('/admin/users', [AdminController::class, 'manageUsers'])->name('admin.manage-users');

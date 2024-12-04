@@ -11,10 +11,11 @@
                     <h2 class="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h2>
                     <p class="text-gray-600">Administrative Portal Access</p>
                 </div>
+                @include('feedback')
 
                 <!-- Login Card -->
                 <div class="bg-white rounded-2xl shadow-xl p-8">
-                    <form method="POST" action="{{ route('admin.login') }}" class="space-y-6">
+                    <form method="POST" action="{{ route('api.login') }}" class="space-y-6">
                         @csrf
 
                         <!-- Email Input -->
@@ -26,7 +27,7 @@
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <i class="fas fa-envelope text-gray-400"></i>
                                 </div>
-                                <input id="email" name="email" type="email" autocomplete="email" required
+                                <input id="email" name="lemail" type="email" autocomplete="email" required
                                     class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                                     placeholder="admin@lagosfslc.gov.ng">
                             </div>
@@ -44,7 +45,7 @@
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <i class="fas fa-lock text-gray-400"></i>
                                 </div>
-                                <input id="password" name="password" type="password" required
+                                <input id="password" name="lpw" type="password" required
                                     class="block w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                                     placeholder="••••••••">
                                 <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center"
